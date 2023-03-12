@@ -1,9 +1,5 @@
 {
-    "name": "FRIENDLY CLUB",
-    "description": "FRIENDLY CLUB - pack consisting of 100 NFTs.  In our collection, you will not see a roadmap, as well as utilities. The main task for each collection token is to collect a friendly club on the The Open Network blockchain. We do not promise you stars from the sky, as many do. We promise you FRIENDLY CLUB.",
+    "name": "TEST Address",
+    "description": "test",
     "image": "https://ipfs.io/ipfs/Qmf5niYSaqczm4tyreaCbRaWwHdyqrbjy9q2SDN8xk8duN?filename=logoc.png",
-    "cover_image": "https://ipfs.io/ipfs/QmSdiFR1RHzC5vWP1NGLKuCvqu3cjXNP3szfZx2QBkHmQG?filename=Frame%209%20(1).jpg",
-    "social_links": [
-      "https://t.me/FriendlyClub_NFT"
-    ]
   }
