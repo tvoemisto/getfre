@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="deposit.css">
+    <title>Deposit</title>
+</head>
+<body>
+    <!-- <h1 id="">Отсканируйте этот QR-код для перевода средств</h1> -->
+    <!-- <img src="" alt="">
+    <span id=""></span> -->
+
+    <section>
+        <br><span id="span-in-s">Пополнение</span>
+        <br><span id="span-in-s1">TON, WEX, JOG, WEX LP.</span><br>
+        <img src="src1/qr-code2.png" alt=""><br>
+        <span id="span-in-s1">Перед пополнением привяжите Tonkeeper/Tonhub кошелёк. Отсканируйте этот QR-код для перевода средств.</span><br>
+        <input type="text" id="textInput" value="EQAe6Bo_KX7f-fp_1mQQyxw_SulYp6qSDVuMfy-OyzNGWcg1"><br>
+        <button id="copy" content=""  onclick="copyText(event)" ></button><br>
+    </section>
+
+<script>
+    function myFunction() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        document.execCommand("copy");
+          
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied: " + copyText.value;
+    }
+        
+    function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy to clipboard";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+:root {
+  --var-body-bg: #232328;
+  --var-color-tx: #fff;
+  --var-intp-br: #303030;
+  --var-color-sr: #525252;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --var-body-bg: #232328;
+    --var-color-tx: #fff;
+    --var-intp-br: #303030;
+    --var-color-sr: #525252;
+
+     --var-body-bg: #fff;
+    --var-color-tx: #3f3f3f;
+    --var-intp-br: #ededed;
+    --var-color-sr: #7D7D7D;
+  }
+} */
+
+html, body{
+    background-color: #232328;
+    color: var(--var-color-tx);
+    font-family: 'Rubik', sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  section{
+    margin-top: -200px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+    height: 630px;
+    max-width: 95%;
+    border: 3px solid var(--var-body-bg);
+    justify-content: space-around;
+    border-radius: 30px;
+  }
+  
+  input[type="text"]{
+    font-family: 'Rubik', sans-serif;
+    user-select: all;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 3px solid var(--var-intp-br);
+    color: var(--var-color-sr);
+    background-color: #232328;
+  }
+  
+  button{
+    font-family: 'Rubik', sans-serif;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    background: #2fbaff;
+    border: 0px solid grey;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    &[content]{
+      &:before {
+        content: "Copy";
+        color: #fff;
+        font-size: 1rem;
+      }
+      &:hover{
+        background: #0fafff;
+        &:before {
+          content: "Copy";
+        }
+      }
+      &:focus{
+        background: #00679a;
+        &:before {
+          content: "Copied";
+          color: white;
+        }
+      }
+    }
+  }
+
+#span-in-s {
+  align-items: center;
+  margin-left: 10px;
+  font-size: 23px;
+}
+#span-in-s1 {
+  align-items: center;
+  margin-left: 10px;
+  font-size: 17px;
+}
