@@ -34,7 +34,6 @@ html, body{
   }
   
   section{
-    margin-top: -200px;
     display: flex;
     flex-direction: column;
     padding: 20px;
