@@ -132,7 +132,7 @@
   Telegram.WebApp.MainButton.setParams({
             text: 'Информация!'
         });
-        Telegram.WebApp.MainButton.onClick(function () {
+        Telegram.WebApp.MainButton.offClick(function () {
             Telegram.WebApp.showAlert('Закройте "WebApp" после того как выбрали токен!')
         });	
         Telegram.WebApp.MainButton.show();
