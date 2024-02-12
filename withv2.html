@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Withdraw</title>
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+  body {
+   background-color: var(--tg-theme-bg-color);
+   font-family: 'Montserrat', sans-serif;
+   margin: 0;
+   padding: 0;
+  }
+  a{
+    text-decoration: none;
+    color: var(--tg-theme-text-color);
+  }
+  #two-lnk {
+    text-decoration: none;
+    color: var(--tg-theme-link-color);;
+  }
+  #two-lnk:hover {
+    color: var(--tg-theme-text-color);
+  }
+  h1 {
+   color: var(--tg-theme-text-color);
+   text-align: center;
+   margin-top: 50px;
+   font-size: 70px;
+  }
+  h2 {
+   color: var(--tg-theme-link-color);
+   text-align: center;
+   margin-top: -50px;
+   font-size: 50px;
+  }
+  .token-list {
+   display: flex;
+   flex-direction: column;
+   overflow-x: auto;
+   margin-top: 50px;
+   justify-content: center;
+   max-width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  .token-item {
+   margin: 20px 10px;
+   background-color: var(--tg-theme-secondary-bg-color);
+   padding: 20px;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   width: 95%;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+  }
+  .token-item:hover {
+   background-color: var(--tg-theme-button-color);
+  }
+  .token-image {
+   width: 85px;
+   height: 85px;
+   object-fit: cover;
+   margin-right: 20px;
+   border-radius: 300px;
+  }
+  .token-info {
+   flex: 1;
+  }
+  .token-name {
+   font-weight: bold;
+   font-size: 50px;
+   color: var(--tg-theme-button-text-color);
+  }
+  .token-abbr {
+   color: var(--tg-theme-link-color);
+   font-size: 40px;
+  }
+  /* Media query for mobile devices */
+  @media (max-width: 767px) {
+   .token-item {
+    padding: 30px;
+   }
+   .token-name {
+    font-size: 100px;
+   }
+   .token-abbr {
+    font-size: 24px;
+   }
+  }
+ </style>
+</head>
+<body>
+ <h1>Вывод</h1>
+ <h2>Выберете токен:</h2>
+ <div class="token-list">
+  <div class="token-item">
+    <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1118',{try_instant_view:true});">
+   <img class="token-image" src="ton_symbol.webp" alt="TON">
+   <div class="token-info">
+    <div class="token-name">TON</div></a>
+    <a id="two-lnk" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1118',{try_instant_view:true});"><div class="token-abbr">The Open Network</div></a>
+   </div>
+  </div>
+  <div class="token-item">
+    <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1376',{try_instant_view:true});">
+   <img class="token-image" src="WEX.png" alt="WEX">
+   <div class="token-info">
+    <div class="token-name">WEX</div></a>
+    <a id="two-lnk" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1376',{try_instant_view:true});"><div class="token-abbr">Wallet Exchanger</div></a>
+   </div>
+  </div>
+  <div class="token-item">
+    <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1257',{try_instant_view:true});"></a>
+   <img class="token-image" src="StalinLogo.png" alt="IVS">
+   <div class="token-info">
+    <div class="token-name">IVS</div></a>
+    <a id="two-lnk" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1257',{try_instant_view:true});"><div class="token-abbr">Stalin</div></a>
+   </div>
+  </div>
+  <div class="token-item">
+    <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1268',{try_instant_view:true});"></a>
+   <img class="token-image" src="JogjaTONLogo.jpg" alt="JOG">
+   <div class="token-info">
+    <div class="token-name">JOG</div></a>
+    <a id="two-lnk" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1268',{try_instant_view:true});"><div class="token-abbr">JogjaTON</div></a>
+   </div>
+  </div>
+ </div>
+</body>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+  Telegram.WebApp.ready();
+
+  Telegram.WebApp.MainButton.setParams({
+            text: 'Информация!'
+        });
+        Telegram.WebApp.MainButton.onClick(function () {
+            Telegram.WebApp.showAlert('Закройте "WebApp" после того как выбрали токен')
+        });	
+        // Telegram.WebApp.MainButton.show();
+</script>
+</html>
