@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Select Token</title>
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+  body {
+   background-color: var(--tg-theme-bg-color);
+   font-family: 'Montserrat', sans-serif;
+   margin: 0;
+   padding: 0;
+  }
+  a{
+    text-decoration: none;
+    color: var(--tg-theme-text-color);
+  }
+  #two-lnk {
+    text-decoration: none;
+    color: var(--tg-theme-link-color);;
+  }
+  #two-lnk:hover {
+    color: var(--tg-theme-text-color);
+  }
+  #qr {
+    text-align: center;
+    width: 750px;
+    height: 750px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  h1 {
+   color: var(--tg-theme-text-color);
+   text-align: center;
+   margin-top: 50px;
+   font-size: 70px;
+  }
+  input {
+    width: 0.001px;
+  }
+  h2 {
+   color: var(--tg-theme-link-color);
+   text-align: left;
+   margin-top: 50px;
+   font-size: 24px;
+   margin-left: 100px;
+   margin-right: 100px;
+  }
+  .token-list {
+   display: flex;
+   flex-direction: column;
+   overflow-x: auto;
+   margin-top: 50px;
+   justify-content: center;
+   max-width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  .token-item {
+   margin: 20px 10px;
+   background-color: var(--tg-theme-button-color);
+   padding: 20px;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   width: 95%;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+  }
+  .token-item:hover {
+   background-color: var(--tg-theme-secondary-bg-color);
+  }
+  .token-image {
+   width: 85px;
+   height: 85px;
+   object-fit: cover;
+   margin-right: 20px;
+   border-radius: 300px;
+  }
+  .token-info {
+   flex: 1;
+  }
+  .token-name {
+   font-weight: bold;
+   font-size: 50px;
+   color: var(--tg-theme-button-text-color);
+  }
+  .token-abbr {
+   color: var(--tg-theme-text-color);
+   font-size: 40px;
+  }
+  /* Media query for mobile devices */
+  @media (max-width: 767px) {
+   .token-item {
+    padding: 30px;
+   }
+   .token-name {
+    font-size: 100px;
+   }
+   .token-abbr {
+    font-size: 24px;
+   }
+  }
+ </style>
+</head>
+<body>
+ <h1>Пополнение TON</h1>
+ <div><h2>Перед пополнением Wallet Explorer, привяжите свой TON кошелёк.</h2></div>
+ <h2>Далее отсканируйте этот QR-код, или же скопируйте данный адрес "EQAe6Bo_KX7f-fp_1mQQyxw_SulYp6qSDVuMfy-OyzNGWcg1"для перевода средств.</h2>
+ <p><img src="qr-code-dep.png" id="qr" alt="QR"></p>
+ <div class="token-list">
+  <div class="token-item">
+    <a href="">
+   <!-- <img class="token-image" src="ton_symbol.webp" alt=""> -->
+   <div class="token-info">
+    <!-- <div class="token-name">TON</div></a> -->
+    <a id="two-lnk" href=""><div class="token-abbr">EQAe6Bo_KX7f-fp_1mQQyxw_Sul...</div></a>
+   </div>
+  </div>
+  <div class="token-item">
+    <a href="">
+   <!-- <img class="token-image" src="ton_symbol.webp" alt=""> -->
+   <div class="token-info">
+    <!-- <div class="token-name">TON</div></a> -->
+    <!-- The text field -->
+    <input type="text" value="EQAe6Bo_KX7f-fp_1mQQyxw_SulYp6qSDVuMfy-OyzNGWcg1" id="myInput">
+    <a id="two-lnk" href="" onclick="myFunction()"><div class="token-abbr">Копировать кошелёк</div></a>
+   </div>
+  </div>
+</div>
+</body>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+  Telegram.WebApp.ready();
+
+  Telegram.WebApp.MainButton.setParams({
+            text: 'Информация!'
+        });
+        Telegram.WebApp.MainButton.onClick(function () {
+            Telegram.WebApp.showAlert('Закройте "WebApp" после того как выбрали токен')
+        });	
+        // Telegram.WebApp.MainButton.show();
+
+  function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied: " + copyText.value);
+}
+</script>
+</html>
