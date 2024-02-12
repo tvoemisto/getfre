@@ -101,7 +101,7 @@
    </div>
   </div>
   <div class="token-item">
-    <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1376');">
+    <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/WalletExplorerBot?start=mb1376');" onclick="toggleMainButton();">
    <!-- <img class="token-image" src="token2.png" alt="Token 2"> -->
    <div class="token-info">
     <div class="token-name">WEX</div></a>
@@ -134,7 +134,6 @@
         });
         Telegram.WebApp.MainButton.offClick(function () {
             Telegram.WebApp.showAlert('Закройте "WebApp" после того как выбрали токен!')
-        });	
-        Telegram.WebApp.MainButton.show();
+        });
 </script>
 </html>
